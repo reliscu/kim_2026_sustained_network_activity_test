@@ -2,7 +2,7 @@ cd splicing
 
 # get list of bams per condition
 
-ls input_data/bams/mCN11*bam input_data/bams/mCN12*bam | paste -sd "," > ctrl_bams_batch2.txt
+ls input_data/bams/mCN11*bam input_data/bams/mCN12*bam | paste -sd "," > ctrl_bams.txt
 ls input_data/bams/mCN13*bam input_data/bams/mCN14*bam | paste -sd "," > caltrap_naive_bams.txt
 ls input_data/bams/mCN15*bam input_data/bams/mCN16*bam | paste -sd "," > caltrap_AR_bams.txt
 
@@ -13,7 +13,7 @@ gtf=input_data/gencode.vM35.annotation.gtf # make sure this has been unzipped
 
 # ctrl vs. caltrap naive
 python "${rmats_path}/rmats.py" \
-    --b1 ctrl_bams_batch2.txt \
+    --b1 ctrl_bams.txt \
     --b2 caltrap_naive_bams.txt \
     --gtf "$gtf" \
     -t paired \
@@ -25,7 +25,7 @@ python "${rmats_path}/rmats.py" \
 
 # ctrl vs. caltrap AR
 python "${rmats_path}/rmats.py" \
-    --b1 ctrl_bams_batch2.txt \
+    --b1 ctrl_bams.txt \
     --b2 caltrap_AR_bams.txt \
     --gtf "$gtf" \
     -t paired \
