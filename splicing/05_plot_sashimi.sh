@@ -12,7 +12,7 @@ cd splicing
 
 comparison="ctrl_vs_naive"
 type="SE" # rmats splicing event type
-events_file="rmats_events_of_interest_${comparison}.txt" # use `02_subset_events_for_plotting.ipynb` to generate these files; all entries should be the same splicing event type (e.g. SE)
+events_file="data/rmats_events_of_interest_${comparison}.txt" # use `02_subset_events_for_plotting.ipynb` to generate these files; all entries should be the same splicing event type (e.g. SE)
 
 # condition 1
 b1_file="ctrl_bams.txt" # list of bams per condition (generated in `01_run_rmats.sh`)
@@ -23,7 +23,7 @@ b2_file="caltrap_naive_bams.txt" # list of bams per condition (generated in `01_
 l2_label="Cal-TRAP naive" # modify this (and the grouping file) to change how condition name appears on plot (must match name in grouping file)
 
 # group samples
-grouping_file="grouping_naive.gf" # puts all samples from a given condition into 1 plot (instead of 1 plot per sample)
+grouping_file="input_data/grouping_naive.gf" # puts all samples from a given condition into 1 plot (instead of 1 plot per sample)
 
 # to change intron:exon size ratio: use `--intron_s` flag
 
