@@ -1,7 +1,6 @@
 cd splicing
 
-# get list of bams per condition
-
+# make list of bams per condition (download data at GEO [accession GSM9758224])
 ls input_data/bams/mCN11*bam input_data/bams/mCN12*bam | paste -sd "," > ctrl_bams.txt
 ls input_data/bams/mCN13*bam input_data/bams/mCN14*bam | paste -sd "," > caltrap_NA_bams.txt
 ls input_data/bams/mCN15*bam input_data/bams/mCN16*bam | paste -sd "," > caltrap_SR_bams.txt
